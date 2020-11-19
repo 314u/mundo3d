@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	>
+
+	<title>Login</title>
+
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+	<head>
+	
+	
+		<script src="jquery/jquery.min.js"></script>
+	
+		<link rel="stylesheet" href="resources/css/bootstrap.min.css"/>
+	
+		
+		<link rel="stylesheet" href="resources/css/style.css"/>
+		
+
+		<script src="resources/js/bootstrap.min.js"></script>
+	
+		
+		<link rel="icon" href="images/icon.png" type="image/x-icon" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"/>
+	
+	</head>
+	<body>
+	<div style="position: relative; transform : translateY(50%)">
+	<div class="container-fluid">
+		<div class="container">
+			<h2 class="text-center" id="title">Mundo 3d</h2>
+ 			
+			<div class="row">
+				<div class="col-md-5 border border-primary rounded">
+ 					<h:form role="form" method="post" action="register.php">
+						<fieldset>							
+							<p class="text-uppercase pull-center"> SIGN UP.</p>	
+ 							<div class="form-group">
+ 							<h:inputText p:type="text" p:class="form-control input-lg" value="#{usuarioController.entity.nome}" p:placeholder="nome do usuario"/>
+							</div>
+
+							<div class="form-group">
+								<h:inputText p:type="email" p:class="form-control input-lg" value="#{usuarioController.entity.email}" p:placeholder="email"/>
+							</div>
+							<div class="form-group">
+								<h:inputText p:type="password" p:class="form-control input-lg" value="#{usuarioController.entity.senha}" p:placeholder="senha"/>
+							</div>
+ 							<div>
+ 							<h:commandButton value="Cadastrar-se" actionListener="#{usuarioController.incluir()}" p:class="btn btn-lg btn-primary " />
+ 							</div>
+						</fieldset>
+					</h:form>
+				</div>
+				
+				<div class="col-md-2">
+				
+				</div>
+				
+				<div class="col-md-5 border border-success rounded">
+ 				 		<h:form role="form">
+						<fieldset>							
+							<p class="text-uppercase"> Login using your account: </p>	
+ 								
+							<div class="form-group">
+								<h:inputText p:type="email" p:class="form-control input-lg" value="#{loginController.usuario.email}" p:placeholder="email"/>
+							</div>
+							<div class="form-group">
+							<h:inputText p:type="password" p:class="form-control input-lg" value="#{loginController.usuario.senha}" p:placeholder="senha"/>
+							</div>
+							<div>
+								<h:commandButton value="Cadastrar-se" actionListener="#{loginController.logar()}" p:class="btn btn-lg btn-success " />
+							</div>
+								 
+ 						</fieldset>
+				</h:form>	
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</body>
+	 
+
+</html>
